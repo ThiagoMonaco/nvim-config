@@ -1,4 +1,5 @@
 local lsp_zero = require('lsp-zero')
+local mason_dap = require('mason-nvim-dap')
 
 lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
@@ -61,4 +62,9 @@ cmp.setup({
 })
 
 
+mason_dap.setup({
+    ensure_installed = {
+        "node2", "js"
+    }
+})
 

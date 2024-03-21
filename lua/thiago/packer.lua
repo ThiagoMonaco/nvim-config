@@ -43,8 +43,10 @@ use {
     {'hrsh7th/cmp-nvim-lsp'},
     {'L3MON4D3/LuaSnip'},
   },
-use('github/copilot.vim')
-
+use('github/copilot.vim'),
+use('mfussenegger/nvim-dap'),
+use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
+use('jay-babu/mason-nvim-dap.nvim'),
 }
 
 end)
