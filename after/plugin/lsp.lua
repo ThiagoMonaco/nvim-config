@@ -20,8 +20,8 @@ require('mason-lspconfig').setup({
 	'docker_compose_language_service',
 	'eslint',
 	'html',
-	--'java_language_server'
-
+	'java_language_server',
+    'hls'
   },
   handlers = {
     lsp_zero.default_setup,
