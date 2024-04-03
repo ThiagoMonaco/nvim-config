@@ -48,7 +48,13 @@ use('mfussenegger/nvim-dap'),
 use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
 use('jay-babu/mason-nvim-dap.nvim'),
 use ('nvim-tree/nvim-web-devicons'),
-use('nvim-tree/nvim-tree.lua')
+use('nvim-tree/nvim-tree.lua'),
+use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 }
 
 end)
