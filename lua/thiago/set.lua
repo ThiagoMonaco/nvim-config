@@ -22,3 +22,10 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+vim.opt.whichwrap:append('h')
+vim.opt.whichwrap:append('l')
+vim.opt.whichwrap:append('<')
+vim.opt.whichwrap:append('>')
+vim.opt.whichwrap:append('[')
+vim.opt.whichwrap:append(']')
+
