@@ -21,7 +21,8 @@ require('mason-lspconfig').setup({
 	'eslint',
 	'html',
 	'java_language_server',
-    'hls'
+    'hls',
+    'elixirls',
   },
   handlers = {
     lsp_zero.default_setup,
