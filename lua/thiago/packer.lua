@@ -13,13 +13,17 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
-use({
-	'rebelot/kanagawa.nvim',
-	config = function () 
-		vim.cmd('colorscheme kanagawa-wave')
-	end
+-- use({
+-- 	'rebelot/kanagawa.nvim',
+-- 	config = function () 
+-- 		vim.cmd('colorscheme kanagawa-wave')
+-- 	end
+--
+-- })
 
-})
+use 'rebelot/kanagawa.nvim'
+
+use 'ggandor/leap.nvim'
 
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use "nvim-lua/plenary.nvim"
