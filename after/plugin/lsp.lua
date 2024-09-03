@@ -1,4 +1,5 @@
 local lsp_zero = require('lsp-zero')
+local mason_dap = require('mason-nvim-dap')
 
 lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
@@ -19,8 +20,12 @@ require('mason-lspconfig').setup({
 	'docker_compose_language_service',
 	'eslint',
 	'html',
-	--'java_language_server'
-
+	'java_language_server',
+    'hls',
+    'elixirls',
+    'rust_analyzer',
+    'gopls'
+    -- 'lexical',
   },
   handlers = {
     lsp_zero.default_setup,
@@ -36,7 +41,7 @@ cmp.setup({
     -- `Enter` key to confirm completion
     -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
-
+    ['<C-q>'] = cmp.mapping.abort(),
     -- Navigate between snippet placeholder
     ['<C-f>'] = cmp_action.luasnip_jump_forward(),
     ['<C-b>'] = cmp_action.luasnip_jump_backward(),
@@ -61,4 +66,9 @@ cmp.setup({
 })
 
 
+mason_dap.setup({
+    ensure_installed = {
+        "node2", "js"
+    }
+})
 

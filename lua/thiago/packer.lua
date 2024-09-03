@@ -13,13 +13,17 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
-use({
-	'rebelot/kanagawa.nvim',
-	config = function () 
-		vim.cmd('colorscheme kanagawa-wave')
-	end
+-- use({
+-- 	'rebelot/kanagawa.nvim',
+-- 	config = function () 
+-- 		vim.cmd('colorscheme kanagawa-wave')
+-- 	end
+--
+-- })
 
-})
+use 'rebelot/kanagawa.nvim'
+
+use 'ggandor/leap.nvim'
 
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use "nvim-lua/plenary.nvim"
@@ -43,8 +47,18 @@ use {
     {'hrsh7th/cmp-nvim-lsp'},
     {'L3MON4D3/LuaSnip'},
   },
-use('github/copilot.vim')
-
+use('github/copilot.vim'),
+use('mfussenegger/nvim-dap'),
+use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
+use('jay-babu/mason-nvim-dap.nvim'),
+use ('nvim-tree/nvim-web-devicons'),
+use('nvim-tree/nvim-tree.lua'),
+use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 }
 
 end)
