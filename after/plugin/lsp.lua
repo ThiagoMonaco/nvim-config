@@ -23,6 +23,9 @@ require('mason-lspconfig').setup({
 	'java_language_server',
     'hls',
     'elixirls',
+    'rust_analyzer',
+    'gopls'
+    -- 'lexical',
   },
   handlers = {
     lsp_zero.default_setup,
